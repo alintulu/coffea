@@ -321,3 +321,33 @@ class PFNanoAODSchema(NanoAODSchema):
         "JetSVs_sVIdx": "SV",
         "SubJet_subGenJetAK8Idx": "SubGenJetAK8",
     }
+
+class ScoutingNanoAODSchema(NanoAODSchema):
+    """ScoutingNano schema builder
+    """
+
+    mixins = {
+        "ScoutingParticle" : "PFCand",
+        "ScoutingJet" : "Jet",
+        "ScoutingFatJet" : "FatJet",
+        "ScoutingPhoton" : "PtEtaPhiMCollection",
+        "ScoutingElectron" : "PtEtaPhiMCollection",
+        "ScoutingMuon" : "PtEtaPhiMCollection",
+        "ScoutingTrack" : "PtEtaPhiMCollection",
+        "ScoutingPrimaryVertex" : "PtEtaPhiMCollection",
+        "ScoutingDisplacedVertex" : "PtEtaPhiMCollection",
+        "ScoutingMET" : "MissingET",
+        "ScoutingRho" : "Rho",
+        "GenJet": "PtEtaPhiMCollection",
+        "GenJetAK8": "PtEtaPhiMCollection",
+        "GenDressedLepton": "PtEtaPhiMCollection",
+        "GenIsolatedPhoton": "PtEtaPhiMCollection",
+        "GenMET": "MissingET",
+        "GenPart": "GenParticle",
+        "SubGenJetAK8": "PtEtaPhiMCollection",
+        "GenVisTau": "GenVisTau",
+    }
+    all_cross_references = {
+        "ScoutingJet_genJetIdx" : "GenJet",
+        "ScoutingFatJet_genJetAK8Idx" : "GenJetAK8",
+    }

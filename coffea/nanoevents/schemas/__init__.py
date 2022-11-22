@@ -1,5 +1,5 @@
 from .base import BaseSchema
-from .nanoaod import NanoAODSchema, PFNanoAODSchema
+from .nanoaod import NanoAODSchema, PFNanoAODSchema, ScoutingNanoAODSchema
 from .treemaker import TreeMakerSchema
 from .physlite import PHYSLITESchema
 from .delphes import DelphesSchema
@@ -13,4 +13,5 @@ __all__ = [
     "PHYSLITESchema",
     "DelphesSchema",
     "PDUNESchema",
+    "ScoutingNanoAODSchema",
 ]
