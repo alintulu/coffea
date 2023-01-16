@@ -348,6 +348,8 @@ class ScoutingNanoAODSchema(NanoAODSchema):
         "GenVisTau": "GenVisTau",
     }
     all_cross_references = {
+        "GenPart_genPartIdxMother": "GenPart",
+        "GenVisTau_genPartIdxMother": "GenPart",
         "ScoutingJet_genJetIdx" : "GenJet",
         "ScoutingFatJet_genJetAK8Idx" : "GenJetAK8",
     }
